@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import OurProjectsNavbar from './OurProjectsNavbar';
 import Footer from './Footer'; // Import the Footer component
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaCheck, FaHome, FaBuilding, FaTree } from 'react-icons/fa'; // Importing icons
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaCheck, FaHome, FaBuilding, FaTree, FaCopy, FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa'; // Importing icons
 
 const OurProjects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,6 +16,12 @@ const OurProjects = () => {
   const phone = "+383 43 123 456";
   const location = "80 Bregu Diellit Prishtinë, Kosovo";
 
+  const socialLinks = [
+    { icon: <FaFacebookF />, url: 'https://www.facebook.com/agonhamiti' },
+    { icon: <FaLinkedinIn />, url: 'https://www.linkedin.com/in/agon-hamiti-3a0013238' },
+    { icon: <FaInstagram />, url: 'https://www.instagram.com/agonhamiti' }
+  ];
+
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text)
       .then(() => {
@@ -25,11 +31,6 @@ const OurProjects = () => {
       .catch(err => {
         console.error("Failed to copy: ", err);
       });
-  };
-
-  const openGoogleMaps = () => {
-    const encodedLocation = encodeURIComponent(location);
-    window.open(`https://www.google.com/maps/search/?api=1&query=${encodedLocation}`, '_blank');
   };
 
   const projects = [
@@ -247,7 +248,7 @@ const OurProjects = () => {
                   <div
                     key={index}
                     className={`min-w-[300px] sm:min-w-[400px] md:min-w-[500px] ${
-                      currentImageIndex === index ? 'border-4 border-blue-500' : ''
+                      currentImageIndex === index ? 'border-4 border-gray-700' : ''
                     }`}
                   >
                     <img
@@ -336,93 +337,131 @@ const OurProjects = () => {
         </div>
       )}
 
-      {/* Contact Section */}
-      <div id="contact" className="contact-section bg-gray-0 py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Left Section */}
-            <div className="contact-left bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Plotform</h3>
-              <p className="mb-4 text-gray-600 text-lg leading-relaxed max-w-xs mx-auto">
-                Your source for innovative architectural solutions. We specialize in transforming spaces through expert interior design and landscaping.
-              </p>
-            </div>
-
-            {/* Middle Section */}
-            <div className="contact-middle bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-              <h3 className="text-lg font-semibold mb-4 text-gray-800">Services</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center">
-                  <FaHome className="text-gray-600 mr-2" />
-                  <span className="text-lg text-gray-800">Interior</span>
-                </li>
-                <li className="flex items-center">
-                  <FaBuilding className="text-gray-600 mr-2" />
-                  <span className="text-lg text-gray-800">Exteriors</span>
-                </li>
-                <li className="flex items-center">
-                  <FaTree className="text-gray-600 mr-2" />
-                  <span className="text-lg text-gray-800">Yards</span>
-                </li>
-                <li className="flex items-center">
-                  <FaHome className="text-gray-600 mr-2" />
-                  <span className="text-lg text-gray-800">Villa</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Right Section */}
-            <div className="contact-right bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-              <h3 className="text-lg font-semibold mb-4 text-gray-800">Contact</h3>
-              <div className="mb-4 text-gray-600 flex items-center">
-                <FaMapMarkerAlt className="mr-2" />
-                <span className="flex-1">{location}</span>
-                <button 
-                  onClick={openGoogleMaps} 
-                  className="ml-2 text-blue-600 font-semibold transition duration-200"
-                  title="Open in Google Maps"
-                >
-                  Open
-                </button>
+      {/* Contact Section - Updated Version */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-28">
+        <h2 className="text-xl sm:text-3xl font-bold text-center mb-12">Contact Us</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Phone Card */}
+          <div className="p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
+            <div className="flex flex-col items-center gap-4">
+              <div className="bg-gray-800 p-3 rounded-full">
+                <FaPhone className="text-white text-xl" />
               </div>
-              <div className="mb-4 text-gray-600 flex items-center">
-                <FaPhone className="mr-2" />
-                <span className="flex-1">{phone}</span>
+              <div className="text-center">
+                <h3 className="text-lg font-semibold mb-2">Phone</h3>
+                <a 
+                  href={`tel:${phone.replace(/\s+/g, '')}`}
+                  className="text-slate-700 hover:text-black transition-colors block mb-2"
+                >
+                  {phone}
+                </a>
                 <button 
                   onClick={() => copyToClipboard(phone)} 
-                  className="ml-2 text-blue-600 font-semibold transition duration-200"
-                  title="Copy Phone Number"
+                  className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-800"
                 >
-                  Copy
+                  {copied === phone ? (
+                    <><FaCheck className="text-emerald-500" /> Copied!</>
+                  ) : (
+                    <><FaCopy /> Copy</>
+                  )}
                 </button>
-                {copied === phone && (
-                  <span className="ml-2 text-green-500 flex items-center">
-                    <FaCheck className="mr-1" /> Copied!
-                  </span>
-                )}
               </div>
-              <div className="mb-4 text-gray-600 flex items-center">
-                <FaEnvelope className="mr-2" />
-                <span className="flex-1">{email}</span>
-                <button 
-                  onClick={() => copyToClipboard(email)} 
-                  className="ml-2 text-blue-600 font-semibold transition duration-200"
-                  title="Copy Email Address"
+            </div>
+          </div>
+
+          {/* Email Card */}
+          <div className="p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
+            <div className="flex flex-col items-center gap-4">
+              <div className="bg-gray-800 p-3 rounded-full">
+                <FaEnvelope className="text-white text-xl" />
+              </div>
+              <div className="text-center">
+                <h3 className="text-lg font-semibold mb-2">Email</h3>
+                <a 
+                  href={`mailto:${email}`}
+                  className="text-slate-700 hover:text-black transition-colors block mb-2"
                 >
-                  Copy
+                  {email}
+                </a>
+                <button 
+                  onClick={() => copyToClipboard(email)}
+                  className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-800"
+                >
+                  {copied === email ? (
+                    <><FaCheck className="text-emerald-500" /> Copied!</>
+                  ) : (
+                    <><FaCopy /> Copy</>
+                  )}
                 </button>
-                {copied === email && (
-                  <span className="ml-2 text-green-500 flex items-center">
-                    <FaCheck className="mr-1" /> Copied!
-                  </span>
-                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Location Card */}
+          <div className="p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
+            <div className="flex flex-col items-center gap-4">
+              <div className="bg-gray-800 p-3 rounded-full">
+                <FaMapMarkerAlt className="text-white text-xl" />
+              </div>
+              <div className="text-center">
+                <h3 className="text-lg font-semibold mb-2">Location</h3>
+                <p className="text-slate-700 mb-2">{location}</p>
+                <a 
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-slate-50 to-white rounded-lg text-slate-600 text-sm font-medium border border-slate-200 shadow-sm hover:shadow hover:border-slate-300 hover:text-slate-800 transition-all duration-200"
+                >
+                  <span>Maps</span>
+                  <svg 
+                    className="w-4 h-4" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={1.5} 
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <Footer />
+      {/* Add this line to create some space between sections */}
+      <div className="h-0"></div>
+
+      {/* Footer Section */}
+      <footer className="bg-gradient-to-r from-gray-100 to-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-center space-y-6">
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 hover:shadow-md transition-all duration-200"
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+            
+            <p className="text-slate-600 text-sm">
+              © 2024 Arch. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+
     </div>
   );
 };

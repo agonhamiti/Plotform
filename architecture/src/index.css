@@ -162,6 +162,16 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Add this to your CSS file */
+.nav-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%; /* Adjust width as needed */
+  background-color: white; /* Background color for the sidebar */
+  z-index: 100; /* Ensure it appears above other content */
+}
+
 /* Landscape CSS for Mobile Devices    */
 @media (orientation: landscape) and (max-width: 768px) {
   .landscape\\:h-full {

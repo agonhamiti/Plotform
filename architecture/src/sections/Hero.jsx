@@ -74,67 +74,51 @@ const Hero = () => {
         </p>
 
         {/* Call-to-Action Button */}
-        <a
-          href="#contact"
-          aria-label="Work With Us section"
-          className="mt-8 group w-fit"
-        >
-          <div
-            className="
-              px-8 py-3
-              bg-gradient-to-r from-gray-800 to-gray-800
-              text-white font-semibold
-              rounded-lg shadow-md
-              relative
-              overflow-hidden
-              transition-all duration-300 transform-gpu
-              hover:scale-105 hover:shadow-lg hover:bg-gray-700
-            "
-            style={{
-              fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)',
-              padding: 'clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem)',
-            }}
+        <div className="mt-8 flex flex-col items-center">
+          <a
+            href="#contact"
+            aria-label="Start Your Project"
+            className="group w-fit"
           >
-            {/** me bon tekstin white  */} 
-            <span className="relative z-10 group-hover:text-gray-900">
-              Start Your Project
-            </span>
             <div
               className="
-                absolute inset-0 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600
-                opacity-0 group-hover:opacity-100
-                transition-all duration-500
+                px-8 py-3
+                bg-white/10
+                text-white font-medium
+                rounded-full
+                relative
+                overflow-hidden
+                transition-all duration-500 ease-out
+                hover:scale-[1.02]
+                border border-white/20
+                hover:border-white/40
+                backdrop-blur-sm
               "
-            ></div>
-          </div>
-        </a>
-      </div>
-
-      {/* Stylish Scroll Down Indicator */}
-      <div className="absolute bottom-4 sm:bottom-8 w-full flex justify-center z-30">
-        <div className="flex flex-col items-center">
-          <p className="text-xs sm:text-sm text-gray-100 mb-2 animate-fade">
-            Scroll Down
-          </p>
-          <div className="relative w-10 h-10 flex justify-center items-center">
-            <div className="absolute w-2 h-2 bg-white rounded-full animate-bounce"></div>
-            <div className="absolute w-2 h-2 bg-white rounded-full animate-bounce delay-200"></div>
-            <div className="absolute w-2 h-2 bg-white rounded-full animate-bounce delay-400"></div>
-            <svg
-              className="w-8 h-8 text-white animate-bounce"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+              style={{
+                fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)',
+                padding: 'clamp(0.75rem, 1.5vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem)',
+              }}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 4v16m0 0l-4-4m4 4l4-4"
-              />
-            </svg>
-          </div>
+              <span className="relative z-10 group-hover:text-white">
+                Start Your Project
+              </span>
+              <div
+                className="
+                  absolute inset-0
+                  bg-gradient-to-r from-white/10 to-white/20
+                  opacity-0 group-hover:opacity-100
+                  transition-all duration-500 ease-out
+                "
+              ></div>
+            </div>
+          </a>
+        </div>
+
+        {/* Scroll Indicator Text */}
+        <div className="absolute bottom-8 w-full flex justify-center z-30">
+          <span className="text-white/90 text-sm animate-bounce">
+            ↓ Explore Our Projects Below
+          </span>
         </div>
       </div>
     </section>

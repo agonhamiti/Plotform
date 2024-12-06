@@ -21,7 +21,7 @@ const OurProjectsNavbar = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-5 mx-auto c-space">
           <Link to="/" className="text-black font-bold text-xl hover:text-white transition-colors">
-            <img src="/assets/logo2arch2.png" alt="Logo" className="h-12 w-auto" />
+            <img src="/Logo/plotformlogo.png" alt="Logo" className="h-12 w-auto" />
           </Link>
 
           <button
@@ -37,7 +37,7 @@ const OurProjectsNavbar = () => {
         </div>
       </div>
 
-      <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
+      <div className={`nav-sidebar transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0 overflow-hidden'}`}>
         <nav className="p-5">
           <OurProjectsNavItems onClick={closeMenu} />
         </nav>

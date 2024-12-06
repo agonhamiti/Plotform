@@ -1,36 +1,36 @@
 import React from 'react';
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
+  const socialLinks = [
+    { icon: <FaFacebookF />, url: 'https://www.facebook.com/agonhamiti' },
+    { icon: <FaLinkedinIn />, url: 'https://www.linkedin.com/in/agon-hamiti-3a0013238' },
+    { icon: <FaInstagram />, url: 'https://www.instagram.com/agonhamiti' }
+  ];
+
   return (
-    <footer className="footer-section bg-gray-100 py-10 px-6 border-t border-gray-300s flex justify-between items-center flex-wrap gap-5">
-      <div className="footer-links text-gray-800 flex gap-4">
-        <p>Terms & Conditions</p>
-        <p>|</p>
-        <p>Privacy Policy</p>
+    <footer className="bg-gradient-to-r from-slate-200 to-white py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center space-y-6">
+          <div className="flex items-center space-x-4">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 hover:shadow-md transition-all duration-200"
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+          
+          <p className="text-slate-600 text-sm">
+            © 2024 Arch. All rights reserved.
+          </p>
+        </div>
       </div>
-
-      <div className="footer-social flex gap-5">
-        <a href="https://www.facebook.com/agonhamiti" target="_blank" rel="noopener noreferrer">
-          <div className="social-icon bg-gray-500 border-gray-600">
-            <img src="/assets/facebook.svg" alt="facebook" className="w-6 h-6" />
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/agon-hamiti-3a0013238" target="_blank" rel="noopener noreferrer">
-          <div className="social-icon bg-gray-500 border-gray-600">
-            <img src="/assets/linkedin2color.svg" alt="linkedin" className="w-6 h-6" />
-          </div>
-        </a>
-
-        <a href="https://www.instagram.com/agonhamiti" target="_blank" rel="noopener noreferrer">
-          <div className="social-icon bg-gray-500 border-gray-600">
-            <img src="/assets/instagram3.svg" alt="instagram" className="w-6 h-6" />
-          </div>
-        </a>
-      </div>
-
-      <p className="footer-copy text-gray-800 mt-4">
-        © 2024 Arch. All rights reserved.
-      </p>
     </footer>
   );
 };

@@ -1,3 +1,4 @@
+/* Root Styles */
 #root {
   width: 100%;
   margin: 0 auto;
@@ -5,6 +6,7 @@
   text-align: center;
 }
 
+/* Image Container Styles */
 .image-container {
   transition: transform 0.3s;
 }
@@ -12,6 +14,8 @@
 .image-container:hover {
   transform: scale(1.05);
 }
+
+/* Slider Styles */
 .slider-container {
   position: relative;
   width: 100%;
@@ -25,19 +29,23 @@
   object-fit: cover; /* Cover the container */
 }
 
+/* Logo Styles */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Keyframes for Animations */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -47,12 +55,14 @@
   }
 }
 
+/* Animation Preferences */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* Font Face Declaration */
 @font-face {
   font-family: 'slick';
   src: url('/fonts/slick.woff') format('woff'),
@@ -61,11 +71,12 @@
   font-style: normal;
 }
 
-
+/* Card Styles */
 .card {
   padding: 2em;
 }
 
+/* Documentation Link Styles */
 .read-the-docs {
   color: #888;
 }

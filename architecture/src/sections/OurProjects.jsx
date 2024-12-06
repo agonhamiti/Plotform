@@ -337,22 +337,22 @@ const OurProjects = () => {
         </div>
       )}
 
-      {/* Contact Section - Updated Version */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-28">
-        <h2 className="text-xl sm:text-3xl font-bold text-center mb-12">Contact Us</h2>
+      {/* Contact Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16 sm:my-28">
+        <h2 className="text-xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Contact Us</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
           {/* Phone Card */}
-          <div className="p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
-            <div className="flex flex-col items-center gap-4">
-              <div className="bg-gray-800 p-3 rounded-full">
-                <FaPhone className="text-white text-xl" />
+          <div className="p-3 sm:p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
+            <div className="flex flex-col items-center gap-3 sm:gap-4">
+              <div className="bg-gray-800 p-2 sm:p-3 rounded-full">
+                <FaPhone className="text-white text-lg sm:text-xl" />
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-semibold mb-2">Phone</h3>
+                <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Phone</h3>
                 <a 
                   href={`tel:${phone.replace(/\s+/g, '')}`}
-                  className="text-slate-700 hover:text-black transition-colors block mb-2"
+                  className="text-sm sm:text-base text-slate-700 hover:text-black transition-colors block mb-1 sm:mb-2"
                 >
                   {phone}
                 </a>

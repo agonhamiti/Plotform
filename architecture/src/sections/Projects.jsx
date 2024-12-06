@@ -59,14 +59,14 @@ const Projects = () => {
         <div className="grid lg:grid-cols-1 gap-10">
           <div className="flex flex-col justify-between">
             <div className="space-y-6 text-gray-900 mt-12 lg:mt-20">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
                 Our Projects
-              </h3>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-800">
+              </h2>
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-800">
                 Crafting Architectural Masterpieces
-              </h1>
+              </h3>
               <p className="text-base sm:text-lg lg:text-xl text-gray-600">
-              Shaping Visions into Stunning Architectural Masterpieces"
+                Shaping Visions into Stunning Architectural Masterpieces
               </p>
               <Button link="our-projects">Explore Projects</Button>
             </div>

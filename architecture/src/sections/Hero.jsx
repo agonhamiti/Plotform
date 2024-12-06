@@ -80,42 +80,38 @@ const Hero = () => {
             aria-label="Start Your Project"
             className="group w-fit"
           >
-            <div
+            <div 
               className="
-                px-8 py-3
-                bg-white/10
-                text-white font-medium
-                rounded-full
-                relative
-                overflow-hidden
-                transition-all duration-500 ease-out
-                hover:scale-[1.02]
-                border border-white/20
-                hover:border-white/40
+                bg-white/10 
+                text-white font-medium 
+                rounded-full 
+                relative 
+                overflow-hidden 
+                transition-all duration-500 ease-out 
+                hover:scale-[1.02] 
+                border border-white/20 
+                hover:border-white/40 
                 backdrop-blur-sm
+                text-base sm:text-lg
+                px-6 sm:px-8 md:px-10
+                py-2.5 sm:py-3 md:py-4
               "
-              style={{
-                fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)',
-                padding: 'clamp(0.75rem, 1.5vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem)',
-              }}
             >
-              <span className="relative z-10 group-hover:text-white">
+              <span className="relative z-10 group-hover:text-white whitespace-nowrap">
                 Start Your Project
               </span>
-              <div
-                className="
-                  absolute inset-0
-                  bg-gradient-to-r from-white/10 to-white/20
-                  opacity-0 group-hover:opacity-100
-                  transition-all duration-500 ease-out
-                "
-              ></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/20 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out"></div>
             </div>
           </a>
         </div>
 
-        {/* Scroll Indicator Text */}
-        <div className="absolute bottom-8 w-full flex justify-center z-30">
+        {/* Mobile version - shows below button */}
+        <span className="text-white/90 text-sm animate-bounce mt-6 md:hidden">
+          ↓ Explore Our Projects Below
+        </span>
+
+        {/* Desktop version - shows at bottom */}
+        <div className="absolute bottom-8 w-full hidden md:flex justify-center z-30">
           <span className="text-white/90 text-sm animate-bounce">
             ↓ Explore Our Projects Below
           </span>

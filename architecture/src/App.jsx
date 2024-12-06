@@ -13,6 +13,8 @@ import LoadingSpinner from "./components/LoadingSpinner"; // Import the loading 
 
 // Lazy load the TeamModal component
 const TeamModal = lazy(() => import("./components/TeamModal"));
+// Lazy load the ExampleLoadingPage component
+const ExampleLoadingPage = lazy(() => import("./components/ExampleLoadingPage"));
 
 const App = () => {
   return (
@@ -42,10 +44,15 @@ const App = () => {
                 </>
               }
             />
-            {/* Example route for TeamModal, adjust as needed */}
+            {/* Route for TeamModal */}
             <Route
               path="/team"
               element={<TeamModal />} // Lazy loaded component
+            />
+            {/* New route for ExampleLoadingPage */}
+            <Route
+              path="/example-loading"
+              element={<ExampleLoadingPage />} // Lazy loaded component
             />
             {/* Add more routes as needed */}
           </Routes>

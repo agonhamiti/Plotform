@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import LoadingSpinner from './LoadingSpinner'; // Import the loading spinner
 
-const TeamModal = () => {
+const ExampleLoadingPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a delay of 2 seconds
+    // Simulate a delay of 3 seconds
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // 2000 milliseconds = 2 seconds
+    }, 3000); // 3000 milliseconds = 3 seconds
 
     return () => clearTimeout(timer); // Cleanup the timer on unmount
   }, []);
@@ -19,10 +19,10 @@ const TeamModal = () => {
 
   return (
     <div>
-      <h1>Team Modal Content</h1>
-      {/* Your modal content goes here */}
+      <h1>Example Loading Page Content</h1>
+      <p>This content is displayed after the loading spinner.</p>
     </div>
   );
 };
 
-export default TeamModal;
+export default ExampleLoadingPage;

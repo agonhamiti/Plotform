@@ -368,7 +368,7 @@ const OurProjects = () => {
                   )}
                 </button>
                 <div className="mt-3 pt-3 border-t border-slate-100">
-                  <p className="text-xs text-slate-400">Click to call or copy number</p>
+                  <p className="text-xs text-slate-600">Click to call or copy number</p>
                 </div>
               </div>
             </div>
@@ -399,7 +399,7 @@ const OurProjects = () => {
                   )}
                 </button>
                 <div className="mt-3 pt-3 border-t border-slate-100">
-                  <p className="text-xs text-slate-400">Click to send email or copy address</p>
+                  <p className="text-xs text-slate-600">Click to send email or copy address</p>
                 </div>
               </div>
             </div>
@@ -436,7 +436,7 @@ const OurProjects = () => {
                   </svg>
                 </a>
                 <div className="mt-3 pt-3 border-t border-slate-100">
-                  <p className="text-xs text-slate-400">Click to open in Google Maps</p>
+                  <p className="text-xs text-slate-600">Click to open in Google Maps</p>
                 </div>
               </div>
             </div>
@@ -459,6 +459,7 @@ const OurProjects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 hover:shadow-md transition-all duration-200"
+                  aria-label={`Visit our ${social.icon.type.displayName} page`}
                 >
                   {social.icon}
                 </a>

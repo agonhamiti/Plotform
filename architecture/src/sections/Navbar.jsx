@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+       <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-6 lg:px-8 py-2 sm:py-8 md:py-4 lg:py-4">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-18 lg:h-20">
           <Link to="/" className="flex items-center space-x-1.5 sm:space-x-2 md:space-x-3">
             <img src="/Logo/plotformlogo.png" alt="Logo" className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" />

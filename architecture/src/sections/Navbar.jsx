@@ -31,11 +31,11 @@ const Navbar = () => {
        <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-6 lg:px-8 py-2 sm:py-8 md:py-4 lg:py-4">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-18 lg:h-20">
           <Link to="/" className="flex items-center space-x-1.5 sm:space-x-2 md:space-x-3">
-            <img src="/Logo/plotformlogo.png" alt="Logo" className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" />
+          <img src="/Logo/plotformlogo.png" alt="Logo" className="h-8 sm:h-10 md:h-10 lg:h-12 w-auto" />
             <span className="text-black font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
               Plotform
-              <span className="inline-grid grid-cols-2 gap-[1px] sm:gap-[1.5px] md:gap-0.5 w-[6px] sm:w-[7px] md:w-[8px] lg:w-3 h-[6px] sm:h-[7px] md:h-[8px] lg:h-3 ml-0.5 sm:ml-1 md:ml-1.5">
-                <span className="bg-black w-[2.5px] sm:w-[3px] md:w-[3.5px] lg:w-[4px] h-[2.5px] sm:h-[3px] md:h-[3.5px] lg:h-[4px]"></span>
+              <span className="inline-grid grid-cols-2 gap-[1.5px] sm:gap-[2px] md:gap-0.5 w-[8px] sm:w-[9px] md:w-[10px] lg:w-4 h-[8px] sm:h-[9px] md:h-[10px] lg:h-4 ml-0.5 sm:ml-1 md:ml-1.5">
+                <span className="bg-black w-[3px] sm:w-[3.5px] md:w-[4px] lg:w-[5px] h-[3px] sm:h-[3.5px] md:h-[4px] lg:h-[5px]"></span>
               </span>
             </span>
           </Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
             onClick={toggleMenu}
             className="text-black hover:text-neutral-600 focus:outline-none sm:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-white hover:bg-gray-200 transition-colors"
             aria-label="Toggle menu">
-            <img src={isOpen ? 'assets/close3.svg' : 'assets/menu2.svg'} alt="toggle" className="w-4 sm:w-5 h-4 sm:h-5" />
+            <img src={isOpen ? 'assets/close3.svg' : 'assets/menu2.svg'} alt="toggle" className="w-6 sm:w-7 h-6 sm:h-7" />
           </button>
 
           <nav className="hidden sm:flex items-center">
@@ -79,11 +79,11 @@ const Navbar = () => {
           {/* Mobile menu header */}
           <div className="p-6 border-b border-gray-100">
             <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-              <img src="/Logo/plotformlogo.png" alt="Logo" className="h-8 w-auto" />
+              <img src="/Logo/plotformlogo.png" alt="Logo" className="h-8 sm:h-10 md:h-10 lg:h-12 w-auto" />
               <span className="text-black font-bold text-lg">
                 Plotform
-                <span className="inline-grid grid-cols-2 gap-[1px] sm:gap-[1.5px] md:gap-0.5 w-[6px] sm:w-[7px] md:w-[8px] lg:w-3 h-[6px] sm:h-[7px] md:h-[8px] lg:h-3 ml-0.5 sm:ml-1 md:ml-1.5">
-                  <span className="bg-black w-[2.5px] sm:w-[3px] md:w-[3.5px] lg:w-[4px] h-[2.5px] sm:h-[3px] md:h-[3.5px] lg:h-[4px]"></span>
+                <span className="inline-grid grid-cols-2 gap-[1.5px] sm:gap-[2px] md:gap-0.5 w-[8px] sm:w-[9px] md:w-[10px] lg:w-4 h-[8px] sm:h-[9px] md:h-[10px] lg:h-4 ml-0.5 sm:ml-1 md:ml-1.5">
+                  <span className="bg-black w-[3px] sm:w-[3.5px] md:w-[4px] lg:w-[5px] h-[3px] sm:h-[3.5px] md:h-[4px] lg:h-[5px]"></span>
                 </span>
               </span>
             </Link>

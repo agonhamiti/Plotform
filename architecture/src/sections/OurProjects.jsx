@@ -187,9 +187,9 @@ const OurProjects = () => {
       <OurProjectsNavbar />
 
       {/* Intro Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center my-28 sm:my-28">
-        <h1 className="text-xl sm:text-3xl font-bold">Our Projects</h1>
-        <p className="mt-4 text-gray-600 text-sm sm:text-base">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-28 sm:mt-36">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-3">Our Projects</h1>
+        <p className="text-gray-600 text-sm sm:text-base mb-16">
           Explore our diverse portfolio of innovative designs and exceptional work.
         </p>
       </div>

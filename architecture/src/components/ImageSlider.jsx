@@ -2,11 +2,23 @@ import React, { useState, useEffect } from 'react';
 import './ImageSlider.css'; // Ensure this path is correct
 
 const images = [
-  '/models/RenderFinal3.jpeg',
-  '/projectsAdem/project3.jpg',
-  '/models/Render6Final.jpeg',
-  '/projectsAdem/project4.jpg',
-  '/projectsAdem/project6.jpg',
+  '/projectsAdem/RenderFinal01.jpeg',
+    '/projectsAdem/RenderFinal01Night.jpeg',
+    '/projectsAdem/RenderFinal2.jpeg',
+    '/projectsAdem/RenderFinal3.jpeg',
+    '/projectsAdem/Render4Final.jpeg',
+    '/projectsAdem/Render6Final.jpeg',
+    '/projectsAdem/Render6FinalNate.jpeg',
+    '/projectsAdem/RenderFinal7.jpeg',
+    '/projectsAdem/project1.jpg',
+    '/projectsAdem/Autosallon1.jpeg',
+        '/projectsAdem/Autosallon2.jpeg',
+        '/projectsAdem/Autosallon3.jpeg',
+        '/projectsAdem/Autosallon4.jpeg',
+          '/projectsAdem/project4.jpg',
+          '/projectsAdem/project7.jpg',
+              '/projectsAdem/project9.jpg',
+              '/projectsAdem/project8.jpg',
 
 ];
 

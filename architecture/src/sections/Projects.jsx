@@ -7,15 +7,27 @@ const ImageCarousel = ({ images, interval, fadeDuration }) => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setFade(false); // Start fade out
+      setFade(false);
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setFade(true); // Start fade in the new image
-      }, fadeDuration); // Wait for fade-out duration
+        setFade(true);
+      }, fadeDuration);
     }, interval);
 
-    return () => clearInterval(intervalId); // Cleanup interval on unmount
+    return () => clearInterval(intervalId);
   }, [images.length, interval, fadeDuration]);
+
+  const goToNextImage = (e) => {
+    e.stopPropagation(); // Prevent closing fullscreen
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const goToPreviousImage = (e) => {
+    e.stopPropagation(); // Prevent closing fullscreen
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <>
@@ -41,23 +53,85 @@ const ImageCarousel = ({ images, interval, fadeDuration }) => {
         </div>
       </div>
 
-      {/* Fullscreen Modal */}
+      {/* Fullscreen Modal with Navigation */}
       {isFullscreen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 sm:p-6"
           onClick={() => setIsFullscreen(false)}
         >
+          {/* Previous Button */}
+          <button
+            className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center text-white bg-black/30 backdrop-blur-sm rounded-full hover:bg-black/50 transition-all duration-300 group"
+            onClick={goToPreviousImage}
+          >
+            <svg 
+              className="w-6 h-6 sm:w-8 sm:h-8 transform group-hover:scale-110 transition-transform duration-300" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M15 19l-7-7 7-7" 
+              />
+            </svg>
+          </button>
+
           <img
             src={images[currentImageIndex]}
             alt="Project Fullscreen"
             className="max-h-[85vh] w-full max-w-screen-2xl object-contain"
           />
+
+          {/* Next Button */}
           <button
-            className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white text-lg sm:text-xl p-2 bg-black/50 rounded-full hover:bg-black/70 transition-colors"
-            onClick={() => setIsFullscreen(false)}
+            className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center text-white bg-black/30 backdrop-blur-sm rounded-full hover:bg-black/50 transition-all duration-300 group"
+            onClick={goToNextImage}
           >
-            ✕
+            <svg 
+              className="w-6 h-6 sm:w-8 sm:h-8 transform group-hover:scale-110 transition-transform duration-300" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M9 5l7 7-7 7" 
+              />
+            </svg>
           </button>
+
+          {/* Close Button */}
+          <button
+            className="absolute top-4 sm:top-8 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-white bg-black/30 backdrop-blur-sm rounded-full hover:bg-black/50 transition-all duration-300 group"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsFullscreen(false);
+            }}
+          >
+            <svg 
+              className="w-5 h-5 sm:w-6 sm:h-6 transform group-hover:scale-110 transition-transform duration-300" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M6 18L18 6M6 6l12 12" 
+              />
+            </svg>
+          </button>
+
+          {/* Image Counter */}
+          <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full text-sm sm:text-base font-medium">
+            {currentImageIndex + 1} / {images.length}
+          </div>
         </div>
       )}
     </>
@@ -74,9 +148,24 @@ const Button = ({ link, children }) => (
 
 const Projects = () => {
   const images1 = [
-    "/projectsAdem/project4.jpg",
-    "/projectsAdem/project7.jpg",
-    "/projectsAdem/project6.jpg",
+    '/projectsAdem/RenderFinal01.jpeg',
+    '/projectsAdem/RenderFinal01Night.jpeg',
+    '/projectsAdem/RenderFinal2.jpeg',
+    '/projectsAdem/RenderFinal3.jpeg',
+    '/projectsAdem/Render4Final.jpeg',
+    '/projectsAdem/Render6Final.jpeg',
+    '/projectsAdem/Render6FinalNate.jpeg',
+    '/projectsAdem/RenderFinal7.jpeg',
+    '/projectsAdem/project1.jpg',
+    '/projectsAdem/Autosallon1.jpeg',
+        '/projectsAdem/Autosallon2.jpeg',
+        '/projectsAdem/Autosallon3.jpeg',
+        '/projectsAdem/Autosallon4.jpeg',
+          '/projectsAdem/project4.jpg',
+          '/projectsAdem/project7.jpg',
+              '/projectsAdem/project9.jpg',
+              '/projectsAdem/project8.jpg',
+
   ];
 
   return (
@@ -98,7 +187,7 @@ const Projects = () => {
             </div>
 
             <div className="mt-12 lg:mt-16">
-              <ImageCarousel images={images1} interval={3500} fadeDuration={300} />
+              <ImageCarousel images={images1} interval={6000} fadeDuration={300} />
             </div>
           </div>
         </div>

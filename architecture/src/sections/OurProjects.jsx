@@ -36,52 +36,54 @@ const OurProjects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Project 1',
+      title: 'Urban Center',
       description:
-        'This is a modern office building with state-of-the-art amenities designed to foster collaboration and innovation.',
+        'A 33,975 m² multifunctional development featuring a hotel, distribution center, wedding hall, gas station, and shopping center, designed to meet diverse community and business needs.',
       images: [
-        '/models/RenderFinal01.jpeg',
-        '/models/RenderFinal01Night.jpeg',
-        '/models/RenderFinal2.jpeg',
-        '/models/RenderFinal3.jpeg',
-        '/models/Render4Final.jpeg',
-        '/models/Render6Final.jpeg',
-        '/models/Render6FinalNate.jpeg',
+        '/projectsAdem/RenderFinal01.jpeg',
+        '/projectsAdem/RenderFinal01Night.jpeg',
+        '/projectsAdem/RenderFinal2.jpeg',
+        '/projectsAdem/RenderFinal3.jpeg',
+        '/projectsAdem/Render4Final.jpeg',
+        '/projectsAdem/Render6Final.jpeg',
+        '/projectsAdem/Render6FinalNate.jpeg',
+        '/projectsAdem/RenderFinal7.jpeg',
+        '/projectsAdem/project1.jpg',
       ],
     },
     {
       id: 2,
-      title: 'Project 2',
-      description:
-        'A residential project that blends minimalistic design with functionality, creating a comfortable living space.',
+      title: 'Auto Showroom',
+      description: 
+        'A modern automotive showroom featuring sleek design elements and optimal display spaces. The project incorporates large glass facades for maximum visibility and natural light, creating an ideal environment for vehicle presentation.',
       images: [
-        '/projectsAdem/project9.jpg',
-        '/projectsAdem/project2.jpg',
-        '/projectsAdem/project3.jpg',
+        '/projectsAdem/Autosallon1.jpeg',
+        '/projectsAdem/Autosallon2.jpeg',
+        '/projectsAdem/Autosallon3.jpeg',
+        '/projectsAdem/Autosallon4.jpeg',
       ],
     },
     {
       id: 3,
-      title: 'Project 3',
+      title: 'Modern Mountain Villa',
       description:
-        'A mixed-use development that brings together residential, commercial, and recreational spaces in a vibrant community.',
+        'A contemporary villa that combines modern design with traditional elements. Featuring floor-to-ceiling windows, an outdoor entertainment area, and a seamless indoor-outdoor living space. The design merges black metal and warm brick facades, creating a perfect balance between modern luxury and natural surroundings.',
       images: [
-        '/projectsAdem/project6.jpg',
+        '/projectsAdem/project4.jpg',
         '/projectsAdem/project7.jpg',
-        '/projectsAdem/project8.jpg',
       ],
     },
     {
       id: 4,
-      title: 'Project 4',
+      title: 'Modern White House',
       description:
-        'A luxury residential complex designed with eco-friendly materials and a focus on sustainable living.',
+        'A striking white modernist residence that embraces geometric simplicity and natural light. The design features clean lines, perforated facades, and multi-level terraces that create a dynamic interplay of light and shadow. This contemporary home seamlessly blends indoor and outdoor spaces while maintaining privacy in an urban setting.',
       images: [
-        '/projectsAdem/project1.jpg',
-        '/projectsAdem/project2.jpg',
-        '/projectsAdem/project3.jpg',
+        '/projectsAdem/project9.jpg',
+        '/projectsAdem/project8.jpg',
       ],
     },
+    /*
     {
       id: 5,
       title: 'Project 5',
@@ -104,6 +106,7 @@ const OurProjects = () => {
         '/projectsAdem/project3.jpg',
       ],
     },
+    */
   ];
 
   const openModal = (project) => {
@@ -200,12 +203,12 @@ const OurProjects = () => {
             onClick={() => openModal(project)}
           >
             <img
-              src={project.images[0]} // Use the first image for the thumbnail
+              src={project.images[0]}
               alt={project.title}
               className="w-full h-48 sm:h-64 object-cover transition-opacity duration-500 group-hover:opacity-80"
             />
             <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50">
-              <h3 className="text-lg sm:text-2xl font-semibold">{project.title}</h3>
+              <h3 className="text-lg sm:text-2xl font-semibold text-center px-4">{project.title}</h3>
             </div>
           </div>
         ))}
@@ -222,7 +225,7 @@ const OurProjects = () => {
           }}
         >
           <div
-            className="bg-white p-4 sm:p-6 rounded-lg w-full sm:w-3/4 md:w-2/3 relative max-h-screen overflow-y-auto"
+            className="bg-white p-4 sm:p-6 rounded-lg w-full sm:w-3/4 md:w-2/3 lg:w-3/4 xl:w-4/5 relative max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center">
@@ -242,32 +245,32 @@ const OurProjects = () => {
 
             {/* Slideshow Controls */}
             <div className="relative mt-6">
-              {/* For small devices (Mobile), horizontal scroll */}
-              <div className="sm:hidden flex overflow-x-auto space-x-4 pb-4">
+              {/* Mobile view */}
+              <div className="sm:hidden flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
                 {currentProject.images.map((image, index) => (
                   <div
                     key={index}
-                    className={`min-w-[300px] sm:min-w-[400px] md:min-w-[500px] ${
-                      currentImageIndex === index ? 'border-4 border-gray-700' : ''
+                    className={`flex-shrink-0 w-[85vw] h-[50vh] ${
+                      currentImageIndex === index ? 'border-4 border-white' : ''
                     }`}
                   >
                     <img
                       src={image}
-                      alt={`Project ${currentProject.title} Image ${index + 1}`}
-                      className="w-full h-auto rounded-lg shadow-lg object-cover cursor-pointer"
-                      onClick={() => handleImageClick(image, index)} // Open image in full screen on click
+                      alt={`${currentProject.title} Image ${index + 1}`}
+                      className="w-full h-full rounded-lg shadow-lg object-contain bg-gray-50"
+                      onClick={() => handleImageClick(image, index)}
                     />
                   </div>
                 ))}
               </div>
 
-              {/* For large devices (Tablets, Desktops), display image with arrows */}
-              <div className="hidden sm:flex justify-center">
+              {/* Desktop view */}
+              <div className="hidden sm:block">
                 <img
                   src={currentProject.images[currentImageIndex]}
-                  alt={`Project ${currentProject.title} Image ${currentImageIndex + 1}`}
-                  className="w-full h-auto max-w-[800px] rounded-lg shadow-lg object-cover cursor-pointer"
-                  onClick={() => handleImageClick(currentProject.images[currentImageIndex], currentImageIndex)} // Open image in full screen
+                  alt={`${currentProject.title} Image ${currentImageIndex + 1}`}
+                  className="w-full h-[70vh] rounded-lg shadow-lg object-contain bg-gray-50 mx-auto"
+                  onClick={() => handleImageClick(currentProject.images[currentImageIndex], currentImageIndex)}
                 />
               </div>
 
@@ -298,8 +301,8 @@ const OurProjects = () => {
       {/* Full Screen Image Modal */}
       {isFullScreen && fullScreenImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50"
-          onClick={closeFullScreen} // Close when clicking outside the image
+          className="fixed inset-0 bg-black/95 flex justify-center items-center z-50"
+          onClick={closeFullScreen}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -307,8 +310,8 @@ const OurProjects = () => {
           <img
             src={fullScreenImage}
             alt="Full Screen"
-            className="max-w-full max-h-full object-contain"
-            onClick={(e) => e.stopPropagation()} // Prevent close when clicking on the image
+            className="max-w-[95vw] max-h-[95vh] object-contain"
+            onClick={(e) => e.stopPropagation()}
           />
           <button
             onClick={closeFullScreen}
@@ -337,7 +340,8 @@ const OurProjects = () => {
         </div>
       )}
 
-      {/* Contact Section */}
+      {/* Contact Section */}.
+      <section id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16 sm:my-28">
         <h2 className="text-xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Contact Us</h2>
         
@@ -443,6 +447,7 @@ const OurProjects = () => {
           </div>
         </div>
       </div>
+      </section>
 
       {/* Add this line to create some space between sections */}
       <div className="h-0"></div>
@@ -467,7 +472,7 @@ const OurProjects = () => {
             </div>
             
             <p className="text-slate-600 text-sm">
-              © 2024 Arch. All rights reserved.
+              © 2024 Plotform. All rights reserved.
             </p>
           </div>
         </div>

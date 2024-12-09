@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           
           <p className="text-slate-600 text-sm">
-            © 2024 Arch. All rights reserved.
+            © 2024 Plotform. All rights reserved.
           </p>
         </div>
       </div>

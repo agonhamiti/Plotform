@@ -6,6 +6,17 @@
   text-align: center;
 }
 
+
+.square-dot {
+  display: inline-block; /* Make it an inline block */
+  width: 12px; /* Set width for a larger square */
+  height: 12px; /* Set height for a larger square */
+  background-color: black; /* Set the color of the square */
+  border-radius: 0; /* No rounding to keep it square */
+  margin-left: 4px; /* Space between the text and the square */
+  vertical-align: middle; /* Align it with the text */
+}
+
 /*React Router Loading Spinner Styles  */
 .loading-spinner {
   display: flex;

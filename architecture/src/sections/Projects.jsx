@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const ImageCarousel = ({ images, interval, fadeDuration }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(true);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -17,24 +18,49 @@ const ImageCarousel = ({ images, interval, fadeDuration }) => {
   }, [images.length, interval, fadeDuration]);
 
   return (
-    <div className="relative group overflow-hidden rounded-xl shadow-xl h-72 lg:h-80">
-      <img
-        src={images[currentImageIndex]}
-        alt="Project"
-        className={`w-full h-full object-cover transition-opacity duration-700 ${fade ? "opacity-100" : "opacity-0"}`}
-      />
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => setCurrentImageIndex(index)}
-            className={`h-2 w-2 rounded-full transition-all cursor-pointer ${
-              index === currentImageIndex ? "bg-black scale-110" : "bg-gray-400"
-            }`}
-          ></div>
-        ))}
+    <>
+      <div className="relative group overflow-hidden rounded-xl shadow-xl h-72 lg:h-80">
+        <img
+          src={images[currentImageIndex]}
+          alt="Project"
+          onClick={() => setIsFullscreen(true)}
+          className={`w-full h-full object-cover transition-opacity duration-700 cursor-pointer ${
+            fade ? "opacity-100" : "opacity-0"
+          }`}
+        />
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`h-2 w-2 rounded-full transition-all cursor-pointer ${
+                index === currentImageIndex ? "bg-black scale-110" : "bg-gray-400"
+              }`}
+            ></div>
+          ))}
+        </div>
       </div>
-    </div>
+
+      {/* Fullscreen Modal */}
+      {isFullscreen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 sm:p-6"
+          onClick={() => setIsFullscreen(false)}
+        >
+          <img
+            src={images[currentImageIndex]}
+            alt="Project Fullscreen"
+            className="max-h-[85vh] w-full max-w-screen-2xl object-contain"
+          />
+          <button
+            className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white text-lg sm:text-xl p-2 bg-black/50 rounded-full hover:bg-black/70 transition-colors"
+            onClick={() => setIsFullscreen(false)}
+          >
+            ✕
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

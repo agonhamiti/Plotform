@@ -40,17 +40,6 @@ const ImageCarousel = ({ images, interval, fadeDuration }) => {
             fade ? "opacity-100" : "opacity-0"
           }`}
         />
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {images.map((_, index) => (
-            <div
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`h-2 w-2 rounded-full transition-all cursor-pointer ${
-                index === currentImageIndex ? "bg-black scale-110" : "bg-gray-400"
-              }`}
-            ></div>
-          ))}
-        </div>
       </div>
 
       {/* Fullscreen Modal with Navigation */}

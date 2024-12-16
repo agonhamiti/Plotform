@@ -172,7 +172,7 @@ const Projects = () => {
               <p className="text-base sm:text-lg lg:text-xl text-gray-600">
                 Shaping Visions into Stunning Architectural Masterpieces
               </p>
-              <Button link="our-projects">Explore Projects</Button>
+              <Button link="our-projects">See All Projects</Button>
             </div>
 
             <div className="mt-12 lg:mt-16">

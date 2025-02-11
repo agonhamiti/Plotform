@@ -10,6 +10,8 @@ import Footer from "./sections/Footer.jsx";
 import Contact from "./sections/Contact.jsx";
 import OurProjects from "./sections/OurProjects";
 import LoadingSpinner from "./components/LoadingSpinner"; // Import the loading spinner
+import { Analytics } from "@vercel/analytics/react"
+
 
 // Lazy load the TeamModal component
 const TeamModal = lazy(() => import("./components/TeamModal"));
@@ -57,6 +59,7 @@ const App = () => {
             {/* Add more routes as needed */}
           </Routes>
         </Suspense>
+        <Analytics /> 
       </main>
     </Router>
   );

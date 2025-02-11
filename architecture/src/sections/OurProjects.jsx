@@ -472,7 +472,7 @@ const OurProjects = () => {
             </div>
             
             <p className="text-slate-600 text-sm">
-              © 2024 Plotform. All rights reserved.
+              © 2025 Plotform. All rights reserved.
             </p>
           </div>
         </div>

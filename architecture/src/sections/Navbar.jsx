@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center h-16 sm:h-18 md:h-14 lg:h-14">
           <Link to="/" className="flex items-center space-x-1.5 sm:space-x-2 md:space-x-3">
           <img src="/Logo/plotformlogo.png" alt="Logo" className="h-8 sm:h-10 md:h-10 lg:h-12 w-auto" />
-              <span className="text-black font-bold text-lg sm:text-lg md:text-xl lg:text-2xl">
+            <span className="text-black font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
               Plotform
               <span className="inline-grid grid-cols-2 gap-[1.5px] sm:gap-[2px] md:gap-0.5 w-[8px] sm:w-[9px] md:w-[10px] lg:w-4 h-[8px] sm:h-[9px] md:h-[10px] lg:h-4 ml-0.5 sm:ml-1 md:ml-1.5">
                 <span className="bg-black w-[3px] sm:w-[3.5px] md:w-[4px] lg:w-[5px] h-[3px] sm:h-[3.5px] md:h-[4px] lg:h-[5px]"></span>

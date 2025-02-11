@@ -1,0 +1,2 @@
+import{r as t,j as e,L as a}from"./index-Hbgeb1Hn.js";const o=()=>{const[n,s]=t.useState(!0);return t.useEffect(()=>{const r=setTimeout(()=>{s(!1)},3e3);return()=>clearTimeout(r)},[]),n?e.jsx(a,{}):e.jsxs("div",{children:[e.jsx("h1",{children:"Example Loading Page Content"}),e.jsx("p",{children:"This content is displayed after the loading spinner."})]})};export{o as default};
+//# sourceMappingURL=ExampleLoadingPage-BLZFaTil.js.map

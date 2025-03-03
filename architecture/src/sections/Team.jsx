@@ -7,7 +7,7 @@ const Team = () => {
           title: "Founder & CEO",
           image: "/assets/neeraj.jpg",
           socialLinks: {
-            instagram: "https://instagram.com/neeraj",
+            instagram: "https://instagram.com",
             email: "neeraj@example.com",
           },
         },
@@ -16,7 +16,7 @@ const Team = () => {
           title: "Director",
           image: "/assets/vipul.jpg",
           socialLinks: {
-            instagram: "https://instagram.com/vipul",
+            instagram: "https://instagram.com",
             email: "vipul@example.com",
           },
         },
@@ -25,7 +25,7 @@ const Team = () => {
           title: "Title",
           image: "/assets/prathamesh.jpg",
           socialLinks: {
-            instagram: "https://instagram.com/prathamesh",
+            instagram: "https://instagram.com",
             email: "prathamesh@example.com",
           },
         },

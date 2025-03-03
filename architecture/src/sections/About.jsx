@@ -13,7 +13,7 @@ const About = () => {
       socialLinks: {
         email: "neeraj@example.com",
         facebook: "https://www.facebook.com/profile.php?id=61570921864197",
-        instagram: "https://instagram.com/neeraj",
+        instagram: "https://instagram.com",
         linkedin: "https://www.linkedin.com/company/plotformarch/"
       },
     },
@@ -24,7 +24,7 @@ const About = () => {
       socialLinks: {
         email: "vipul@example.com",
         facebook: "https://www.facebook.com/profile.php?id=61570921864197",
-        instagram: "https://instagram.com/vipul",
+        instagram: "https://instagram.com",
         linkedin: "https://www.linkedin.com/company/plotformarch/"
       },
     },
@@ -35,7 +35,7 @@ const About = () => {
       socialLinks: {
         email: "prathamesh@example.com",
         facebook: "https://www.facebook.com/profile.php?id=61570921864197",
-        instagram: "https://instagram.com/prathamesh",
+        instagram: "https://instagram.com",
         linkedin: "https://www.linkedin.com/company/plotformarch/",
       },
     },

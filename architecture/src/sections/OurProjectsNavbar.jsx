@@ -98,7 +98,7 @@ const Navbar = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://instagram.com/plotform" 
+                  href="https://instagram.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-[#E4405F] transition-colors"

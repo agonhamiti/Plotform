@@ -14,7 +14,7 @@ const About = () => {
         email: "neeraj@example.com",
         facebook: "https://facebook.com/neeraj",
         instagram: "https://instagram.com/neeraj",
-        linkedin: "https://linkedin.com/in/neeraj",
+        linkedin: " www.linkedin.com/company/plotformarch/",
       },
     },
     {
@@ -25,7 +25,7 @@ const About = () => {
         email: "vipul@example.com",
         facebook: "https://facebook.com/vipul",
         instagram: "https://instagram.com/vipul",
-        linkedin: "https://linkedin.com/in/vipul",
+        linkedin: "www.linkedin.com/company/plotformarch/",
       },
     },
     {
@@ -36,7 +36,7 @@ const About = () => {
         email: "prathamesh@example.com",
         facebook: "https://facebook.com/prathamesh",
         instagram: "https://instagram.com/prathamesh",
-        linkedin: "https://linkedin.com/in/prathamesh",
+        linkedin: "www.linkedin.com/company/plotformarch/",
       },
     },
   ];

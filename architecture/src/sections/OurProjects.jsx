@@ -18,7 +18,7 @@ const OurProjects = () => {
 
   const socialLinks = [
     { icon: <FaFacebookF />, url: 'https://www.facebook.com/agonhamiti' },
-    { icon: <FaLinkedinIn />, url: 'https://www.linkedin.com/in/agon-hamiti-3a0013238' },
+    { icon: <FaLinkedinIn />, url: 'www.linkedin.com/company/plotformarch/' },
     { icon: <FaInstagram />, url: 'https://www.instagram.com/agonhamiti' }
   ];
 

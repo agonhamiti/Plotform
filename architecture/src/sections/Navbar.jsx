@@ -125,7 +125,7 @@ const Navbar = () => {
                   </svg>
                 </a>
                 <a 
-                  href="www.linkedin.com/company/plotformarch/" 
+                  href="https://www.linkedin.com/company/plotformarch/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-[#0A66C2] transition-colors"

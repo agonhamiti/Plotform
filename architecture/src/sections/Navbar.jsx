@@ -103,7 +103,7 @@ const Navbar = () => {
               {/* Social Links */}
               <div className="flex justify-center space-x-8">
                 <a 
-                  href="https://facebook.com/plotform" 
+                  href="https://www.facebook.com/profile.php?id=61570921864197" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-[#1877F2] transition-colors"

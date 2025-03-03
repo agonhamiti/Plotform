@@ -17,8 +17,8 @@ const OurProjects = () => {
   const location = "80 Bregu Diellit Prishtinë, Kosovo";
 
   const socialLinks = [
-    { icon: <FaFacebookF />, url: 'https://www.facebook.com/agonhamiti' },
-    { icon: <FaLinkedinIn />, url: 'www.linkedin.com/company/plotformarch/' },
+    { icon: <FaFacebookF />, url: 'https://www.facebook.com/profile.php?id=61570921864197' },
+    { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/company/plotformarch/" },
     { icon: <FaInstagram />, url: 'https://www.instagram.com/agonhamiti' }
   ];
 

@@ -3,8 +3,8 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const socialLinks = [
-    { name: 'Facebook', icon: <FaFacebookF />, url: 'https://www.facebook.com/agonhamiti' },
-    { name: 'LinkedIn', icon: <FaLinkedinIn />, url: 'www.linkedin.com/company/plotformarch/' },
+    { name: 'Facebook', icon: <FaFacebookF />, url: 'https://www.facebook.com/profile.php?id=61570921864197' },
+    { name: 'LinkedIn', icon: <FaLinkedinIn />, url: "https://www.linkedin.com/company/plotformarch/" },
     { name: 'Instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/agonhamiti' }
   ];
 

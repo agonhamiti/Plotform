@@ -12,9 +12,9 @@ const About = () => {
       image: "path/to/neeraj.jpg",
       socialLinks: {
         email: "neeraj@example.com",
-        facebook: "https://facebook.com/neeraj",
+        facebook: "https://www.facebook.com/profile.php?id=61570921864197",
         instagram: "https://instagram.com/neeraj",
-        linkedin: " www.linkedin.com/company/plotformarch/",
+        linkedin: "https://www.linkedin.com/company/plotformarch/"
       },
     },
     {
@@ -23,9 +23,9 @@ const About = () => {
       image: "path/to/vipul.jpg",
       socialLinks: {
         email: "vipul@example.com",
-        facebook: "https://facebook.com/vipul",
+        facebook: "https://www.facebook.com/profile.php?id=61570921864197",
         instagram: "https://instagram.com/vipul",
-        linkedin: "www.linkedin.com/company/plotformarch/",
+        linkedin: "https://www.linkedin.com/company/plotformarch/"
       },
     },
     {
@@ -34,9 +34,9 @@ const About = () => {
       image: "path/to/prathamesh.jpg",
       socialLinks: {
         email: "prathamesh@example.com",
-        facebook: "https://facebook.com/prathamesh",
+        facebook: "https://www.facebook.com/profile.php?id=61570921864197",
         instagram: "https://instagram.com/prathamesh",
-        linkedin: "www.linkedin.com/company/plotformarch/",
+        linkedin: "https://www.linkedin.com/company/plotformarch/",
       },
     },
   ];

@@ -87,7 +87,7 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <div className="flex justify-center space-x-8">
                 <a 
-                  href="https://facebook.com/plotform" 
+                  href="https://www.facebook.com/profile.php?id=61570921864197" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-[#1877F2] transition-colors"
@@ -109,7 +109,7 @@ const Navbar = () => {
                   </svg>
                 </a>
                 <a 
-                  href="www.linkedin.com/company/plotformarch/" 
+                  href="https://www.linkedin.com/company/plotformarch/"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-[#0A66C2] transition-colors"
